@@ -1,0 +1,127 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SchedEd
+build_property.ProjectDir = C:\PDC05_SchedEd\SchedEd\SchedEd\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/ClassPageCollection/AddClassPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.ClassPageCollection.AddClassPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ClassPageCollection\AddClassPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ClassPageCollection\AddClassPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/ClassPageCollection/ClassPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.ClassPageCollection.ClassPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ClassPageCollection\ClassPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ClassPageCollection\ClassPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/ClassPageCollection/EditClassPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.ClassPageCollection.EditClassPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ClassPageCollection\EditClassPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ClassPageCollection\EditClassPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/ClassPageCollection/SpecificClassPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.ClassPageCollection.SpecificClassPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ClassPageCollection\SpecificClassPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ClassPageCollection\SpecificClassPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/GenderFilterPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.GenderFilterPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\GenderFilterPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\GenderFilterPopup.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/GenderFilterPopupHome.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.GenderFilterPopupHome.xaml
+build_metadata.AdditionalFiles.TargetPath = View\GenderFilterPopupHome.xaml
+build_metadata.AdditionalFiles.RelativePath = View\GenderFilterPopupHome.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/Home.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.Home.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Home.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Home.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/RecordPageCollection/RecordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.RecordPageCollection.RecordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\RecordPageCollection\RecordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\RecordPageCollection\RecordPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/RecordPageCollection/SpecificRecordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.RecordPageCollection.SpecificRecordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\RecordPageCollection\SpecificRecordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\RecordPageCollection\SpecificRecordPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/StudentsPageCollection/AddStudentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.StudentsPageCollection.AddStudentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\StudentsPageCollection\AddStudentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\StudentsPageCollection\AddStudentPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/StudentsPageCollection/EditStudentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.StudentsPageCollection.EditStudentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\StudentsPageCollection\EditStudentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\StudentsPageCollection\EditStudentPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/StudentsPageCollection/SpecificStudentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.StudentsPageCollection.SpecificStudentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\StudentsPageCollection\SpecificStudentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\StudentsPageCollection\SpecificStudentPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/StudentsPageCollection/StudentsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.StudentsPageCollection.StudentsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\StudentsPageCollection\StudentsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\StudentsPageCollection\StudentsPage.xaml
+
+[C:/PDC05_SchedEd/SchedEd/SchedEd/View/UserPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SchedEd.View.UserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UserPage.xaml

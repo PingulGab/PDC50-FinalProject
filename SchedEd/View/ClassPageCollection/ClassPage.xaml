@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SchedEd.View.ClassPageCollection"
+             x:Class="SchedEd.View.ClassPageCollection.ClassPage"
+             Title="Classes">
+    <ScrollView>
+        <VerticalStackLayout WidthRequest="360">
+            <Frame>
+                <VerticalStackLayout>
+                    <Label Text="Select Class"/>
+                    <Picker WidthRequest="320"
+                            ItemsSource="{Binding Classes}"
+                            ItemDisplayBinding="{Binding Name}"
+                            SelectedItem="{Binding SelectedClass}"/>
+                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center" HorizontalOptions="Center">
+                        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="5" Margin="0, 10, 0, 0">
+                            <Button Text="Add" WidthRequest="70" Clicked="NavAddClassPage"/>
+                            <Button Text="Edit" WidthRequest="70" IsEnabled="{Binding IsClassSelected}" Command="{Binding EditClassCommand}" CommandParameter="{Binding SelectedClass}"/>
+                            <Button Text="Delete" WidthRequest="70" IsEnabled="{Binding IsClassSelected}" Command="{Binding DeleteClassCommand}"/>
+                        </HorizontalStackLayout>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <SearchBar WidthRequest="360" 
+                       Margin="0, 20, 0, 0"
+                       Placeholder="Search by Name"
+                       Text="{Binding SearchText}" 
+                       TextChanged="OnSearchTextChanged"/>
+
+            <VerticalStackLayout Margin="0, 20, 0, 0"
+                                 WidthRequest="360">
+                <ListView ItemsSource="{Binding Classes}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Border BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}"
+                                        Stroke="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}"
+                                        StrokeShape="RoundRectangle 10"
+                                        Padding="10"
+                                        Margin="0, 5, 0, 0"
+                                        WidthRequest="360">
+                                    <FlyoutBase.ContextFlyout>
+                                        <MenuFlyout>
+                                            <MenuFlyoutItem Text="View"
+                                                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:ClassPage}}, Path=BindingContext.OnViewClassCommand}"
+                                                            CommandParameter="{Binding .}" />
+                                            <MenuFlyoutItem Text="Edit"
+                                                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:ClassPage}}, Path=BindingContext.EditClassCommand}"
+                                                            CommandParameter="{Binding .}" />
+                                            <MenuFlyoutItem Text="Delete"
+                                                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:ClassPage}}, Path=BindingContext.OnDeleteClassCommand}"
+                                                            CommandParameter="{Binding .}" />
+                                        </MenuFlyout>
+                                    </FlyoutBase.ContextFlyout>
+                                    <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto" ColumnSpacing="10">
+                                        <!-- Class Image -->
+                                        <Image Grid.Column="0"
+                                               Source="{Binding Image}"
+                                               WidthRequest="50"
+                                               HeightRequest="50"
+                                               Aspect="AspectFill"
+                                               VerticalOptions="Center"/>
+
+                                        <!-- Class Name -->
+                                        <VerticalStackLayout Grid.Column="1"
+                                                 VerticalOptions="Center">
+                                            <Label Text="{Binding Name}"
+                                                   HorizontalOptions="Start"
+                                                   VerticalOptions="Center"
+                                                   TextColor="White"/>
+                                            <Label Text="{Binding Acronym}"
+                                                   HorizontalOptions="Start"
+                                                   VerticalOptions="Center"
+                                                   TextColor="White"/>
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </Border>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

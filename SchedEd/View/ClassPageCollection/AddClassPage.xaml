@@ -1,0 +1,76 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchedEd.View.ClassPageCollection.AddClassPage"
+             Title="Classes - Add">
+    <ScrollView>
+        <VerticalStackLayout WidthRequest="360">
+            <!-- Image Preview -->
+            <Frame IsVisible="{Binding ImagePreviewPath, Converter={StaticResource NullToBooleanConverter}}">
+                <Image Source="{Binding ImagePreviewPath}" HeightRequest="200" />
+            </Frame>
+
+            <!-- Input for Class Name -->
+            <Entry Placeholder="Class Name"
+                   Margin="0, 10, 0, 0"
+                   WidthRequest="340"
+                   Text="{Binding ClassName}" />
+
+            <!-- Input for Class Acronym -->
+            <Entry Placeholder="Class Acronym"
+                   WidthRequest="340"
+                   Text="{Binding ClassAcronym}"/>
+
+            <!-- Image Upload -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button Text="Upload Image"
+                        Command="{Binding UploadImageCommand}"
+                        Margin="0, 10, 0, 0"/>
+            </HorizontalStackLayout>
+
+            <!-- Days Selection -->
+            <Label Text="Select Days:"
+                   Margin="0, 10, 0, 0"/>
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="{Binding Days.Monday}" />
+                    <Label Text="Monday" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="{Binding Days.Tuesday}" />
+                    <Label Text="Tuesday" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="{Binding Days.Wednesday}" />
+                    <Label Text="Wednesday" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="{Binding Days.Thursday}" />
+                    <Label Text="Thursday" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="{Binding Days.Friday}" />
+                    <Label Text="Friday" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="{Binding Days.Saturday}" />
+                    <Label Text="Saturday" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Start and End Time -->
+            <Label Text="Start Time:" Margin="0, 10, 0, 0"/>
+            <TimePicker Time="{Binding StartTime}" />
+
+            <Label Text="End Time:" />
+            <TimePicker Time="{Binding EndTime}" />
+
+            <!-- Buttons -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0, 10, 0, 10">
+                <Button Text="Cancel"
+                    Command="{Binding CancelCommand}" />
+                <Button Text="Submit"
+                    Command="{Binding SubmitCommand}" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

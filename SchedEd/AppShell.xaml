@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SchedEd.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SchedEd"
+    Shell.FlyoutBehavior="Disabled"
+    
+    xmlns:views="clr-namespace:SchedEd.View"
+    
+    xmlns:classes="clr-namespace:SchedEd.View.ClassPageCollection"
+    
+    xmlns:students="clr-namespace:SchedEd.View.StudentsPageCollection"
+    
+    xmlns:records="clr-namespace:SchedEd.View.RecordPageCollection"
+    
+    Title="SchedEd"
+    
+    FlyoutBehavior="Flyout"
+    
+    FlyoutBackgroundColor="#274156"
+    
+    BackgroundColor="#F1F1F1"
+    >
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="{Binding FlyoutIcon}"
+                       Margin="5"
+                       HeightRequest="45"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                <Label Grid.Column="1"
+                       Text="{Binding Title}"
+                       TextColor="White"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+            </HorizontalStackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <FlyoutItem Title="Home" Icon="home.png">
+        <ShellContent
+            Title="MainPage"
+            ContentTemplate="{DataTemplate views:Home}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+    <!-- Class -->
+    <FlyoutItem Title="Class" Icon="class.png">
+        <ShellContent
+        Title="ClassPage"
+        ContentTemplate="{DataTemplate classes:ClassPage}"
+        Route="ClassPage" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <ShellContent
+            Title="AddClassPage"
+            ContentTemplate="{DataTemplate classes:AddClassPage}"
+            Route="AddClassPage" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <ShellContent
+        Title="EditClassPage"
+        ContentTemplate="{DataTemplate classes:EditClassPage}"
+        Route="EditClassPage" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <ShellContent
+        Title="SpecificClassPage"
+        ContentTemplate="{DataTemplate classes:SpecificClassPage}"
+        Route="SpecificClassPage" />
+    </FlyoutItem>
+
+    <!-- Students -->
+    <FlyoutItem Title="Students" Icon="student.png">
+        <ShellContent
+        Title="StudentsPage"
+        ContentTemplate="{DataTemplate students:StudentsPage}"
+        Route="StudentsPage" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <ShellContent
+        Title="AddStudentPage"
+        ContentTemplate="{DataTemplate students:AddStudentPage}"
+        Route="AddStudentPage" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <ShellContent
+        Title="EditStudentPage"
+        ContentTemplate="{DataTemplate students:EditStudentPage}"
+        Route="EditStudentPage" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <ShellContent
+        Title="SpecificStudentPage"
+        ContentTemplate="{DataTemplate students:SpecificStudentPage}"
+        Route="SpecificStudentPage" />
+    </FlyoutItem>
+
+    <!-- Records -->
+    <FlyoutItem Title="Record Attendance" Icon="attendance.png">
+        <ShellContent
+        Title="RecordPage"
+        ContentTemplate="{DataTemplate records:RecordPage}"
+        Route="RecordPage" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <ShellContent
+        Title="SpecificRecordPage"
+        ContentTemplate="{DataTemplate records:SpecificRecordPage}"
+        Route="SpecificRecordPage" />
+    </FlyoutItem>
+</Shell>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchedEd.View.ClassPageCollection.SpecificClassPage"
+             Title="Class - View">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" WidthRequest="360">
+            <!-- Image Preview -->
+            <Frame IsVisible="{Binding ImagePreviewPath, Converter={StaticResource NullToBooleanConverter}}">
+                <Image Source="{Binding ImagePreviewPath}" HeightRequest="200" />
+            </Frame>
+
+            <VerticalStackLayout HorizontalOptions="Center">
+                <!-- Class Name -->
+                <Label HorizontalTextAlignment="Center"
+                       FontSize="18"
+                       Margin="0, 10, 0, 0"
+                       Text="{Binding ClassName}" />
+
+                <!-- Class Acronym -->
+                <Label HorizontalTextAlignment="Center"
+                       Margin="0, 10, 0, 0"
+                       Text="{Binding ClassAcronym}" />
+            </VerticalStackLayout>
+
+            <!-- Days Selection -->
+            <Label Text="Select Days:"
+               Margin="0, 10, 0, 0" />
+            <HorizontalStackLayout>
+                <CheckBox IsChecked="{Binding Days[Monday]}" IsEnabled="False"/>
+                <Label Text="Monday" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox IsChecked="{Binding Days[Tuesday]}" IsEnabled="False"/>
+                <Label Text="Tuesday" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox IsChecked="{Binding Days[Wednesday]}" IsEnabled="False"/>
+                <Label Text="Wednesday" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox IsChecked="{Binding Days[Thursday]}" IsEnabled="False"/>
+                <Label Text="Thursday" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox IsChecked="{Binding Days[Friday]}" IsEnabled="False"/>
+                <Label Text="Friday" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox IsChecked="{Binding Days[Saturday]}" IsEnabled="False"/>
+                <Label Text="Saturday" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Time Pickers -->
+            <Label Text="Start Time:" Margin="0, 10, 0, 0" />
+            <TimePicker Time="{Binding StartTime}" IsEnabled="False"/>
+
+            <Label Text="End Time:" Margin="0, 10, 0, 0" />
+            <TimePicker Time="{Binding EndTime}" IsEnabled="False"/>
+
+            <!-- Buttons -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0, 20, 0, 0">
+                <Button Text="Back"
+                    Command="{Binding BackCommand}" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

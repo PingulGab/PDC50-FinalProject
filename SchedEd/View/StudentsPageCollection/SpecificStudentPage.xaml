@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchedEd.View.StudentsPageCollection.SpecificStudentPage"
+             Title="Stundent - View">
+    <ScrollView>
+        <VerticalStackLayout WidthRequest="360">
+            <!-- Image Preview -->
+            <Image Source="{Binding ImagePreviewPath}" 
+                   HeightRequest="200" 
+                   WidthRequest="200">
+                <Image.Clip>
+                    <EllipseGeometry Center="100,100" RadiusX="100" RadiusY="100" />
+                </Image.Clip>
+            </Image>
+
+            <VerticalStackLayout HorizontalOptions="Center" Margin="0, 20, 0, 0">
+                <Label Text="{Binding InputName}" FontSize="18"
+                   HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding InputStudentID}"
+                   HorizontalTextAlignment="Center"/>
+
+                <HorizontalStackLayout Spacing="10" Margin="0, 10, 0, 0" HorizontalOptions="Center">
+                    <Button Text="Back" Command="{Binding BackCommand}"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!--CATEGORY: Student Information-->
+
+            <!-- Contact Number -->
+            <VerticalStackLayout WidthRequest="360" Margin="0, 3, 0, 0">
+                <Frame  Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="Contact Number" FontSize="12"/>
+                        <Label Text="{Binding InputContactNumber}"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Birth Date -->
+            <VerticalStackLayout WidthRequest="360" Margin="0, 3, 0, 0">
+                <Frame  Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="Birth Date" FontSize="12"/>
+                        <Label Text="{Binding InputBirthdate}"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+
+            <!--CATEGORY: Academic History-->
+            <!--Elementary Education-->
+            <VerticalStackLayout WidthRequest="360" Margin="0, 10, 0, 0">
+                <Label Text="Academic History"/>
+                <Frame  Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="Elementary Education" FontSize="12"/>
+                        <Label Text="{Binding InputElementaryEducation}"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!--Secondary Education-->
+            <VerticalStackLayout WidthRequest="360" Margin="0, 3, 0, 0">
+                <Frame  Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="Secondary Education" FontSize="12"/>
+                        <Label Text="{Binding InputSecondaryEducation}"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!--Tertiary Education-->
+            <VerticalStackLayout WidthRequest="360" Margin="0, 3, 0, 0">
+                <Frame  Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="Tertiary Education" FontSize="12"/>
+                        <Label Text="{Binding InputTertiaryEducation}"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!--CATEGORY: Attendance Record-->
+            <VerticalStackLayout WidthRequest="360" Margin="0, 10, 0, 0">
+                <Label Text="Attendance Record" Margin="0,0,0,0"/>
+
+                <!-- Summary Frame -->
+                <Frame Padding="10" Margin="0, 0, 0, 5">
+                    <Label Text="{Binding AttendanceSummary}" HorizontalTextAlignment="Center" FontSize="16"/>
+                </Frame>
+
+                <!-- Individual Attendance Entries -->
+                <CollectionView ItemsSource="{Binding AttendanceRecords}" Margin="0, 0, 0, 10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" Margin="0, 0, 0, 5">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Date, StringFormat='{}{0:MMMM dd, yyyy}'}" FontSize="12"/>
+                                    <Label Text="{Binding Status}" FontSize="14"/>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchedEd.View.RecordPageCollection.SpecificRecordPage"
+             Title="Take Attendance">
+
+    <VerticalStackLayout Padding="20" Spacing="20" WidthRequest="360">
+        <!-- Header Section -->
+        <Border 
+                Stroke="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}"
+                StrokeShape="RoundRectangle 10"
+                Padding="10">
+            <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto" ColumnSpacing="10">
+                <VerticalStackLayout VerticalOptions="Center" Grid.Column="0">
+                    <Label Text="{Binding ClassName}" 
+                           FontSize="18"
+                           TextColor="Black" />
+                    <Label Text="{Binding ClassAcronym}"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+                <Button Grid.Column="2"
+                        Text="Cancel"
+                        Command="{Binding CancelCommand}"
+                        VerticalOptions="Center"
+                        TextColor="White" />
+            </Grid>
+        </Border>
+
+        <!-- Dropdown for Students -->
+        <Picker Title="Select Student"
+                ItemsSource="{Binding Students}"
+                SelectedItem="{Binding SelectedStudent}"
+                ItemDisplayBinding="{Binding Name}" />
+
+        <!-- Student Details -->
+        <Frame HasShadow="True" CornerRadius="10" Padding="10">
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Image Source="{Binding SelectedStudent.Image}" 
+                       WidthRequest="100" 
+                       HeightRequest="100"
+                       Aspect="AspectFill" />
+                <Label Text="{Binding SelectedStudent.Name}" 
+                       HorizontalOptions="Center"
+                       FontSize="20" 
+                       TextColor="Black" />
+                <Label Text="{Binding SelectedStudent.StudentID}" 
+                       HorizontalOptions="Center"
+                       FontSize="16" 
+                       TextColor="Gray" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <!-- Attendance Buttons -->
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Present"
+                    Command="{Binding PresentCommand}"
+                    TextColor="White"
+                    BackgroundColor="#04724D"
+                    WidthRequest="100" />
+            <Button Text="Absent"
+                    Command="{Binding AbsentCommand}" 
+                    BackgroundColor="#A41623"
+                    TextColor="White"
+                    WidthRequest="100" />
+            <Button Text="Excused"
+                    Command="{Binding ExcusedCommand}" 
+                    BackgroundColor="#FFB21E"
+                    TextColor="White"
+                    WidthRequest="100" />
+        </HorizontalStackLayout>
+
+        <!-- Navigation Buttons -->
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Button Text="Back"
+                    Command="{Binding BackCommand}" 
+                    TextColor="White"
+                    WidthRequest="100" />
+            <Button Text="Next"
+                    Command="{Binding NextCommand}"
+                    TextColor="White"
+                    WidthRequest="100" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
