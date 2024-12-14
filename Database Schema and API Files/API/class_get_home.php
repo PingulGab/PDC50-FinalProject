@@ -1,0 +1,18 @@
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+
+include 'db.php';
+
+$sql = "SELECT * FROM classes LIMIT 3";
+$result = $conn->query($sql);
+
+$users = [];
+while ($row = $result->fetch_assoc()) {
+    $users[] = $row;
+}
+
+echo json_encode($users);
+
+$conn->close();
+?>
